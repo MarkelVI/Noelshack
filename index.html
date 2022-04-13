@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RCU</title>
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+        font-size: 15pt;
+        background-color: #343C3B;
+        color: white;
+    }
+    
+    
+    button {
+        background-color: #5DADE2;
+        border: none;
+        color: white;
+        padding: 12px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+        transition-duration: 0.4s;
+    }
+    
+    button:hover {
+        border: 1px solid #5DADE2;
+        background-color: #343C3B;
+        color:#5DADE2;
+        border-radius:0px;
+    }
+    
+    
+    #longueur {
+        background-color: #343C3B;
+        width: 80%;
+        height: 100px;
+        border-radius: 4px;
+        color: white;
+    }
+    
+    #answer {
+        background-color: #343C3B;
+        resize: none;
+        width: 200px;
+        height: 2.2em;
+        border-radius: 12px;
+        color: white;
+    }
+    
+    textarea:focus {
+        outline: none !important;
+        border: 1px #5DADE2;
+        box-shadow: 0 0 10px #719ECE;
+    }
+    </style>
+    <script>
+    function getVal() {
+    const val = document.getElementById('longueur').value;
+    var chap = val.replace(/http\S+/g, "");
+    var kss = (chap.length/1000).toFixed(1)
+    var kas = (val.length/1000).toFixed(1)
+    var sticker = (val.match(/http\S+/g) || []).length
+
+    document.getElementById('answer').innerHTML =`Le chapitrent fait ${kss} kss, ${kas} kas\net ${sticker} stickers`;
+}
+    </script>
+</head>
+
+<body>
+
+<p><label id="textent">Compteur de Kss</label></p>
+<p><textarea id="longueur" name="longueur"></textarea></textarea></p>
+
+<p><textarea id="answer" disabled></textarea></p>
+
+<p><button class="button" onclick="getVal();">Valider ent</button></p>
+
+
+<script src="main.js"></script>
+</body>
+
+</html>
