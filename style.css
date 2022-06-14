@@ -26,19 +26,18 @@ button:hover {
 }
 
 
-#longueur {
+#lien {
   background-color: #343C3B;
-  width: 80%;
-  height: 100px;
+  width: 100px;
+  height: 35px;
   border-radius: 4px;
   color: white;
 }
 
 #answer {
   background-color: #343C3B;
-  resize: none;
-  width: 200px;
-  height: 2.2em;
+  width: 500px;
+  height: 35px;
   border-radius: 12px;
   color: white;
 }
